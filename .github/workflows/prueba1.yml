@@ -10,6 +10,15 @@ jobs: # Primera tarea que va a ejecutar mi workflow.
             - name: Hola Mundo
               run: echo "Hola Mundo"
 
+            - name: touch file
+              run: touch file.txt
+
+            - name: Set text
+              run: echo "Hola Thalia" > file.txt  
+
+            - name: Read file
+              run: cat file.txt  
+
     otrojob:
         runs-on: ubuntu-latest
 
