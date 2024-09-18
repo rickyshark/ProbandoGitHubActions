@@ -10,3 +10,10 @@ jobs: # Primera tarea que va a ejecutar mi workflow.
             - name: Hola Mundo
               run: echo "Hola Mundo"
 
+    otrojob:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Hola Mundo2
+              run: echo "Hola Mundo2"
+
