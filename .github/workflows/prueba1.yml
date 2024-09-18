@@ -21,7 +21,7 @@ jobs: # Primera tarea que va a ejecutar mi workflow.
 
     otrojob:
         runs-on: ubuntu-latest
-
+        needs: hola
         steps:
             - name: Hola Mundo2
               run: echo "Hola Mundo2"
