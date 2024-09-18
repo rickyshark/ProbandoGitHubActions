@@ -1,0 +1,12 @@
+name: Hola Mundo #Nombre de mi workflow
+
+on: [push] # Mi workflow se va a ejecutar cuando se dispare este evento en mi repositorio.
+
+jobs: # Primera tarea que va a ejecutar mi workflow.
+    hola:
+        runs-on: ubuntu-latest
+
+        steps: #Primer paso que va a dar mi job.
+            - name: Hola Mundo
+              run: echo "Hola Mundo"
+
