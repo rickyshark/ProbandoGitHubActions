@@ -1,0 +1,24 @@
+name: Ricky Montero
+
+person: 
+  name: Leo
+  age: 25
+  city: San Jose
+  country: Costa Rica
+  courses:
+    - name: Python
+      level: Basic
+    - name: Java
+      level: Intermediate
+    - name: C#
+      level: Advanced
+
+# Script de multiple lineas.
+script: >
+  puede ser
+  tal vez
+
+script2: |
+  touch hola.txt
+  echo "Hola Mundo"
+
