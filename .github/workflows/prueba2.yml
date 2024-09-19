@@ -13,7 +13,14 @@ jobs:
         steps:
             - name: Checkout #En este paso me estoy ubucando en el repositorio  actual
               uses: actions/checkout@v2
+
             - name: ls
-              run: |
+              run: | #Mas abajo se escribe un string multilineas
                 chmod +x script.sh 
                 ./script.sh
+
+            - name: Setup Node.js environment  #Configurando node js utilizando un action de la marketplace de actions
+              uses: actions/setup-node@v4.0.4
+                
+            - name: Ver la version de node js
+              run: node --version  
