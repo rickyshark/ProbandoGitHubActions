@@ -1,7 +1,12 @@
 name: Hola Mundo #Nombre de mi workflow
 
-on: [push, pull_request] # Mi workflow se va a ejecutar cuando se dispare uno de estos eventos en mi repositorio.
-
+on: #[push, pull_request] # Mi workflow se va a ejecutar cuando se dispare uno de estos eventos en mi repositorio.
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main        
 jobs: # Primera tarea que va a ejecutar mi workflow.
     hola:
         runs-on: ubuntu-latest
