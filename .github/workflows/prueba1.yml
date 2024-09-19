@@ -10,7 +10,7 @@ on: #[push, pull_request] # Mi workflow se va a ejecutar cuando se dispare uno d
 jobs: 
     MiPrimerJob: # Primera tarea que va a ejecutar mi workflow.
         runs-on: ubuntu-latest # Maquina virtual cargada o sistema operativo.
-
+        needs: MiSegundoJob
         steps: #Pasos que se van a ejecutar para llevar acabo mi trabajo.
             - name: Imprimiendo mensaje en consola #Paso 1
               run: echo "Hola Mundo"
@@ -29,7 +29,7 @@ jobs:
 
     MiSegundoJob: # Segunda tarea que va a ejecutar mi workflow.
         runs-on: ubuntu-latest
-        needs: MiPrimerJob # Espera que se ejecute mi primera tarea que va a ejecutar mi workflow.
+        #needs: MiPrimerJob # Espera que se ejecute mi primera tarea que va a ejecutar mi workflow.
         
         steps:
             - name: Checkout
