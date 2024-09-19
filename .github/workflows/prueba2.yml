@@ -2,10 +2,18 @@ name: InstalacionDePaquetes
 
 on: [push]
 
+#run: ls -al #Enlista todos los archivos de mi directorio actual.
+#  chmod +x script.sh :Aqui le estoy dando el permiso al archivo para poder ejecutarlo.
+#  ./script.sh :Aqui estoy ejecutando el archivo.
 jobs:
     
-    MiPrimerJob:   
+    test-build:   
         runs-on: ubuntu-latest
+
         steps:
+            - name: Checkout #En este paso me estoy ubucando en el repositorio  actual
+              uses: actions/checkout@v2
             - name: ls
-              run: ls -al
+              run: |
+                chmod +x script.sh 
+                ./script.sh
