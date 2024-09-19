@@ -1,0 +1,11 @@
+#Creando mi propia action
+
+name: "My action"
+description: "Test my action"
+
+runs:
+  using: "composite" 
+
+  steps:
+    - name: Hola mundo desde mi action
+      run: echo "Desde mi action creada."

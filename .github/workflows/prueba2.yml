@@ -21,6 +21,10 @@ jobs:
 
             - name: Setup Node.js environment  #Configurando node js utilizando un action de la marketplace de actions
               uses: actions/setup-node@v4.0.4
+              with:
+                node-version: latest #Especificando la version que quiero instalar
+
+            - name: Utilizando mi Action
+              uses: ./.github/actions/myaction
                 
-            - name: Ver la version de node js
-              run: node --version  
+
