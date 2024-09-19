@@ -9,14 +9,14 @@ on: #[push, pull_request] # Mi workflow se va a ejecutar cuando se dispare uno d
             - main #O ejecuta mi workflow a la hora de hacer un pull request unicamente a la rama de main.       
 jobs: # Primera tarea que va a ejecutar mi workflow.
     hola:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-latest # Maquina virtual cargada o sistema operativo.
 
         steps: #Pasos que se van a ejecutar para llevar acabo mi trabajo.
             - name: Hola Mundo #Paso 1
               run: echo "Hola Mundo"
 
             - name: touch file #Paso 2
-              run: touch file.txt
+              run: touch file.txt # Con la directiva run podemos ejecutar cualquier comando que se encuentre en nuestra maquina virtual.
 
             - name: Set text #Paso 3
               run: echo "Hola Thalia" > file.txt  
