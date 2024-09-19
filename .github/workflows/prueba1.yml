@@ -7,7 +7,7 @@ jobs: # Primera tarea que va a ejecutar mi workflow.
         runs-on: ubuntu-latest
 
         steps: #Primer paso que va a dar mi job.
-            - name: Hola Mundo
+            - name: Hola Mundo #Paso 1
               run: echo "Hola Mundo"
 
             - name: touch file
