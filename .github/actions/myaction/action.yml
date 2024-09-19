@@ -9,3 +9,4 @@ runs:
   steps:
     - name: Hola mundo desde mi action
       run: echo "Desde mi action creada."
+      shell: bash
