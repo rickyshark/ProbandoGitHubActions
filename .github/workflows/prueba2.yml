@@ -1,0 +1,11 @@
+name: InstalacionDePaquetes
+
+on: [push]
+
+jobs:
+    
+    MiPrimerJob:   
+        runs-on: ubuntu-latest
+        steps:
+            - name: ls
+              run: ls -al
