@@ -1,0 +1,11 @@
+name: Trabajando con servicios en mi  workflow
+
+on: [push]
+
+jobs:
+
+    servicioJob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Mi Primer Paso
+              run: echo("Imprimiendo mi primer paso con servicio.")
