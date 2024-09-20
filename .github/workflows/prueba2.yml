@@ -11,8 +11,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
- #           - name: Checkout #En este paso me estoy ubucando en el repositorio  actual
- #             uses: actions/checkout@v2
+            - name: Checkout #En este paso me estoy ubucando en el repositorio  actual
+              uses: actions/checkout@v2
 
  #           - name: ls
  #             run: | #Mas abajo se escribe un string multilineas
@@ -27,6 +27,6 @@ jobs:
             - name: Utilizando mi Action
               uses: ./.github/actions/myaction
               with:
-                message: ""
+                message: 
             
 
