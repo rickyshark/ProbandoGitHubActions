@@ -12,7 +12,7 @@ jobs:
               run: |
                 mkdir -p ~/.ssh 
                 echo "${{secrets.KEY_SSH}}" >> ~/.ssh/id_rsa
-                chmod 600 ~/.ssh/known_hosts
+                chmod 600 ~/.ssh/id_rsa
                 ssh-keyscan -H 127.0.1.1 >> ~/.ssh/known_hosts
 
                 cat ~/.ssh/known_hosts
