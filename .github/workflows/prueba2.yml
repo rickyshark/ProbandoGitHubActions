@@ -26,5 +26,7 @@ jobs:
 
             - name: Utilizando mi Action
               uses: ./.github/actions/myaction
-                
+              with:
+                message: "Rycky tu"
+            
 
