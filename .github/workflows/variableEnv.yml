@@ -7,6 +7,10 @@ jobs:
     MiPrimeraVariable:
         runs-on: ubuntu-latest
 
+
+        env: #Directiva
+            MY_VAR: Valor de la variable
+
         steps:
             - name: Viendo mi primera variable
-              run: echo "Imprimiendo mi primera variable"
+              run: echo "Imprimiendo mi primera variable, $MY_VAR"
