@@ -1,5 +1,7 @@
 name: Variables de entorno
 
+
+#Existen diferente manera de como usar o acceder a las variables de entorno. (Global, desde mi step y en el apartado de Secrets y Variables en GitHub)
 on: [push]
 
 jobs:
@@ -9,8 +11,14 @@ jobs:
 
 
         env: #Directiva
-            MY_VAR: Valor de la variable
+            MY_VAR: Valor de la variable global
 
         steps:
+                
             - name: Viendo mi primera variable
               run: echo "Imprimiendo mi primera variable, $MY_VAR"
+
+            - name: Viendo mi primera variable
+              env:
+                MY_VAR_STEP: Mi valor desde step
+              run: echo "Imprimiendo mi primera variable, $MY_VAR_STEP"      
