@@ -6,6 +6,15 @@ jobs:
 
     servicioJob:
         runs-on: ubuntu-latest
+
+        services:
+            mysql:
+                image: mysql:5.7
+                env:
+                    MYSQL_ROOT_PASSWORD: example #No usarla aqui a la hora de pasar a producción.
+                ports:
+                    - 3306:3306    
+
         steps:
             - name: Mi Primer Paso
               run: echo "Imprimiendo mi primer paso con servicio."
