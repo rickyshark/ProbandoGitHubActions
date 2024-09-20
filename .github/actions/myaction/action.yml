@@ -14,5 +14,5 @@ runs:
 
   steps:
     - name: Hola mundo desde mi action
-      run: echo "Amor ${{ inputs.message }}"
+      run: echo "${{ inputs.message }}"
       shell: bash
