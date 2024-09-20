@@ -7,5 +7,5 @@ jobs:
     servicioJob:
         runs-on: ubuntu-latest
         steps:
-            - name: MiPrimerPaso
+            - name: Mi Primer Paso
               run: echo "Imprimiendo mi primer paso con servicio."
