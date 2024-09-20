@@ -1,0 +1,12 @@
+name: Variables de entorno
+
+on: [push]
+
+jobs:
+
+    MiPrimeraVariable:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Viendo mi primera variable
+              run: echo "Imprimiendo mi primera variable"

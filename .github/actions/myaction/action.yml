@@ -3,13 +3,13 @@
 name: "My action"
 description: "Test my action"
 
-inputs:
+inputs: #Directiva
   message:
     description: "The message to print"
     required: true
     default: "Desde mi action creada, enviando desde el parametro message."
 
-runs:
+runs: #Directiva
   using: "composite" 
 
   steps:
