@@ -14,15 +14,15 @@ jobs:
             - name: Checkout #En este paso me estoy ubucando en el repositorio  actual
               uses: actions/checkout@v2
 
- #           - name: ls
- #             run: | #Mas abajo se escribe un string multilineas
- #               chmod +x script.sh 
- #               ./script.sh
+            - name: ls
+              run: | #Mas abajo se escribe un string multilineas
+                chmod +x script.sh 
+                ./script.sh
 
- #           - name: Setup Node.js environment  #Configurando node js utilizando un action de la marketplace de actions
- #             uses: actions/setup-node@v4.0.4
- #             with:
- #               node-version: latest #Especificando la version que quiero instalar
+            - name: Setup Node.js environment  #Configurando node js utilizando un action de la marketplace de actions
+              uses: actions/setup-node@v4.0.4
+              with:
+                node-version: latest #Especificando la version que quiero instalar
 
             - name: Utilizando mi Action
               uses: ./.github/actions/myaction
