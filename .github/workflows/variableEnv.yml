@@ -24,6 +24,4 @@ jobs:
               run: echo "Imprimiendo mi primera variable, $MY_VAR_STEP"    
               
             - name: Viendo mi tercera variable desde GitHub
-              env:
-                MY_VAR_STEP: Mi valor desde GitHub
               run: echo "Imprimiendo mi primera variable, ${{ vars.myVariableGitHub }}"                 
