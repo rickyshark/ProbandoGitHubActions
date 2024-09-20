@@ -1,0 +1,17 @@
+name: Trabajando con llaves SSH
+
+on: [push]
+
+jobs:
+
+    JobSSH:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Obteniendo llave SSH
+              run: |
+                mkdir -p ~/.ssh 
+                echo "${{secrets.KEY_SSH}}" >> ~/.ssh/id_rsa
+                chmod 600 ~/.ssh/known_hosts
+
+                cat ~/.ssh/known_hosts
