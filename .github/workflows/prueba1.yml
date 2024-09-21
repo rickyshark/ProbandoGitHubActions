@@ -10,31 +10,10 @@ on: #[push, pull_request] # Mi workflow se va a ejecutar cuando se dispare uno d
 jobs: 
     MiPrimerJob: # Primera tarea que va a ejecutar mi workflow.
         runs-on: ubuntu-latest # Maquina virtual cargada o sistema operativo.
-        needs: MiSegundoJob
         steps: #Pasos que se van a ejecutar para llevar acabo mi trabajo.
-            - name: Imprimiendo mensaje en consola #Paso 1
-              run: echo "Hola Mundo"
+          - name: Imprimiendo el nombre de mi novia
+            run: echo "Gabriela Morillo Mendez"
+            
 
-            - name: Creando mi archivo #Paso 2
-              run: touch file.txt # Con la directiva run podemos ejecutar cualquier comando que se encuentre en nuestra maquina virtual.
-
-            - name: Colocando data dentro de mi archivo #Paso 3
-              run: echo "Hola Thalia" > file.txt  
-
-            - name: Viendo la data de mi archivo #Paso 4
-              run: cat file.txt  
-
-            - name: Eliminado el archivo creado
-              run: rm file.txt
-
-    MiSegundoJob: # Segunda tarea que va a ejecutar mi workflow.
-        runs-on: ubuntu-latest
-        #needs: MiPrimerJob # Espera que se ejecute mi primera tarea que va a ejecutar mi workflow.
-        
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4.1.7
-
-            - name: Archivos en mi directorio actual 
-              run: ls -al
+            
 
