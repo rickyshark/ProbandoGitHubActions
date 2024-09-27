@@ -12,8 +12,8 @@ jobs: # Primera tarea que va a ejecutar mi workflow.
         runs-on: self-hosted # Maquina virtual cargada o sistema operativo.
 
         steps: #Pasos que se van a ejecutar para llevar acabo mi trabajo.
-            - name: Hola Mundo #Paso 1
-              run: echo "Hola Mundo"
+            - name: Creando mi propio runner desde github #Paso 1
+              run: echo ls
 
             - name: touch file #Paso 2
               run: touch file.txt # Con la directiva run podemos ejecutar cualquier comando que se encuentre en nuestra maquina virtual.
