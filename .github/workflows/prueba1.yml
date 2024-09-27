@@ -1,4 +1,4 @@
-name: Hola Mundo #Nombre de mi workflow
+name: Creando mi propio Runner #Nombre de mi workflow
 
 on: #[push, pull_request] # Mi workflow se va a ejecutar cuando se dispare uno de estos eventos en mi repositorio.
     push:
@@ -8,7 +8,7 @@ on: #[push, pull_request] # Mi workflow se va a ejecutar cuando se dispare uno d
         branches:
             - main #O ejecuta mi workflow a la hora de hacer un pull request unicamente a la rama de main.       
 jobs: # Primera tarea que va a ejecutar mi workflow.
-    hola:
+    build:
         runs-on: self-hosted # Maquina virtual cargada o sistema operativo.
 
         steps: #Pasos que se van a ejecutar para llevar acabo mi trabajo.
@@ -24,9 +24,9 @@ jobs: # Primera tarea que va a ejecutar mi workflow.
             - name: Read file #Paso 4
               run: cat file.txt  
 
-    otrojob:
+    deploy:
         runs-on: ubuntu-latest
-        needs: hola
+        needs: build
         steps:
             - name: Checkout
               uses: actions/checkout@v4.1.7
