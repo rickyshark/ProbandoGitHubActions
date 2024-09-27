@@ -9,7 +9,7 @@ jobs:
 
         steps:
             - name: Obteniendo llave SSH
-              run: |
+              run: |   # Operador para escribir codigo multilineas
                 mkdir -p ~/.ssh 
                 echo "${{secrets.KEY_SSH}}" >> ~/.ssh/id_rsa
                 chmod 600 ~/.ssh/id_rsa

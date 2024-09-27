@@ -16,9 +16,10 @@ jobs:
         steps:
                 
             - name: Viendo mi primera variable global
-              run: echo "Imprimiendo mi primera variable, $MY_VAR"
+              run: echooo "Imprimiendo mi primera variable, $MY_VAR"
 
             - name: Viendo mi segunda variable step
+              if: success()
               env:
                 MY_VAR_STEP: Mi valor desde step
               run: echo "Imprimiendo mi primera variable, $MY_VAR_STEP"    
