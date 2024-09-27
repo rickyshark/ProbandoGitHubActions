@@ -6,7 +6,7 @@ on: [push]
 jobs:
 
     servicioJob:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
 
         services: #Directiva
             mysql:
