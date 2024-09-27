@@ -6,15 +6,7 @@ on: [push]
 jobs:
 
     servicioJob:
-        runs-on: self-hosted
-
-        services: #Directiva
-            mysql:
-                image: mysql:5.7
-                env:
-                    MYSQL_ROOT_PASSWORD: example #No usarla aqui a la hora de pasar a producción, mejor crear un secreto o una variable en otro lugar.
-                ports:
-                    - 3306:3306    
+        runs-on: self-hosted 
 
         steps:
             - name: Mi Primer Paso
