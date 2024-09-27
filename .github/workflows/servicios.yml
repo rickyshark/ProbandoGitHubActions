@@ -4,10 +4,22 @@ on: [push]
 
 
 jobs:
+  servicioJob:
+    runs-on: self-hosted
 
-    servicioJob:
-        runs-on: self-hosted 
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: example
+        ports:
+          - 3306:3306    
 
-        steps:
-            - name: Mi Primer Paso
-              run: echo "Imprimiendo mi primer paso con servicio."
+    steps:
+      - name: Mi Primer Paso
+        run: echo "Imprimiendo mi primer paso con servicio."
+      
+      - name: Verificando estado de MySQL
+        run: |
+          docker ps
+          echo "Servicio MySQL está en ejecución."
