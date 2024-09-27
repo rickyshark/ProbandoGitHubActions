@@ -13,8 +13,8 @@ jobs:
                 php-version: [7.4, 8.0, 8.1]
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v3
+            - name: Checkout
+              uses: actions/checkout@v4.2.0
             
             - name: SET UP PHP
               uses: shivammathur/setup-php@v2
