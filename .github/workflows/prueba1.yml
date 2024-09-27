@@ -9,7 +9,7 @@ on: #[push, pull_request] # Mi workflow se va a ejecutar cuando se dispare uno d
             - main #O ejecuta mi workflow a la hora de hacer un pull request unicamente a la rama de main.       
 jobs: # Primera tarea que va a ejecutar mi workflow.
     hola:
-        runs-on: ubuntu-latest # Maquina virtual cargada o sistema operativo.
+        runs-on: self-hosted # Maquina virtual cargada o sistema operativo.
 
         steps: #Pasos que se van a ejecutar para llevar acabo mi trabajo.
             - name: Hola Mundo #Paso 1
